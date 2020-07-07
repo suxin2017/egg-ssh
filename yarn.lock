@@ -401,6 +401,15 @@
   resolved "https://npm.corp.kuaishou.com/@types%2fminimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha1-PcoOPzOyAPx9ETnAzZbBJoyt/Z0=
 
+"@types/node-ssh@^7.0.0":
+  version "7.0.0"
+  resolved "https://npm.corp.kuaishou.com/@types%2fnode-ssh/-/node-ssh-7.0.0.tgz#5d51671563a34c112b2c799b39215f30c121a0fd"
+  integrity sha1-XVFnFWOjTBErLHmbOSFfMMEhoP0=
+  dependencies:
+    "@types/node" "*"
+    "@types/ssh2" "*"
+    "@types/ssh2-streams" "*"
+
 "@types/node@*":
   version "14.0.18"
   resolved "https://npm.corp.kuaishou.com/@types%2fnode/-/node-14.0.18.tgz#5111b2285659442f9f95697386a2b42b875bd7e9"
@@ -441,6 +450,21 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/ssh2-streams@*":
+  version "0.1.7"
+  resolved "https://npm.corp.kuaishou.com/@types%2fssh2-streams/-/ssh2-streams-0.1.7.tgz#bf79349ec85a4dfb5b3fd9f4a05af729121f07e6"
+  integrity sha1-v3k0nshaTftbP9n0oFr3KRIfB+Y=
+  dependencies:
+    "@types/node" "*"
+
+"@types/ssh2@*":
+  version "0.5.44"
+  resolved "https://npm.corp.kuaishou.com/@types%2fssh2/-/ssh2-0.5.44.tgz#8bda3ffe9cab038a997f6749df76cc52249d1916"
+  integrity sha1-i9o//pyrA4qZf2dJ33bMUiSdGRY=
+  dependencies:
+    "@types/node" "*"
+    "@types/ssh2-streams" "*"
 
 "@types/superagent@*":
   version "4.1.8"

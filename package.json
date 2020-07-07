@@ -11,6 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
+    "@types/node-ssh": "^7.0.0",
     "node-ssh": "^10.0.2",
     "ssh2": "^0.8.9"
   },
