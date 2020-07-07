@@ -5,9 +5,9 @@ interface EggSSH extends NodeSSH {
 
     constructor(initConfig: ConfigGiven)
 
-    autoConnect(config: ConfigGiven): EggSSH
+    autoConnect(config?: ConfigGiven): EggSSH
 
-    autoConnectExecCommand(givenCommand: string, options: ExecOptions, config: ConfigGiven): Promise<SSH.ExecResult>
+    autoConnectExecCommand(givenCommand: string, options?: ExecOptions, config?: ConfigGiven): Promise<SSH.ExecResult>
 }
 
 declare module 'egg' {
