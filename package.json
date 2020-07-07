@@ -1,6 +1,6 @@
 {
   "name": "egg-ssh",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "egg 插件 基于ssh2",
   "eggPlugin": {
     "name": "ssh"
@@ -39,7 +39,8 @@
   },
   "files": [
     "config",
-    "app.js"
+    "app.js",
+    "index.d.ts"
   ],
   "ci": {
     "version": "8, 10"
