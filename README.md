@@ -20,9 +20,27 @@
 [download-image]: https://img.shields.io/npm/dm/egg-ssh.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-ssh
 
-<!--
-Description here.
--->
+一款基于node-ssh,它基于ssh2的egg链接ssh的插件。
+主要api参考[node-ssh](https://www.npmjs.com/package/node-ssh)
+
+拓展API
+
+```
+
+class EggSSH extends NodeSSH{
+    
+    constructor(config:Config)
+
+    // 自动连接
+    autoConnect(config?:Config):Promise<EggSSH>
+    
+    // 自动连接并执行命令
+    autoConnectExecCommand(givenCommand: string,
+        options?:SSHExecCommandOptions,
+        config?:Config):Promise<SSHExecCommandResponse>
+}
+
+```
 
 ## Install
 
@@ -42,9 +60,16 @@ exports.ssh = {
 
 ## Configuration
 
+链接配置参考
+[node-ssh](https://www.npmjs.com/package/node-ssh)
+
 ```js
 // {app_root}/config/config.default.js
-exports.ssh = {
+exports.ssh =  {
+    host: '127.0.0.1',
+    port: '22',
+    username: 'root',
+    password: 'root',
 };
 ```
 
@@ -52,7 +77,24 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
-<!-- example here -->
+ssh 会挂载到app上，可以通过this.app.ssh进行api调用
+```js
+// 例如
+// app/controller/home.js
+'use strict';
+
+const Controller = require('egg').Controller;
+
+class HomeController extends Controller {
+  async index() {
+    const result = await this.app.ssh.autoConnectExecCommand('expr 1 + 1');
+    this.ctx.body = result.stdout;
+  }
+}
+
+module.exports = HomeController;
+
+```
 
 ## Questions & Suggestions
 

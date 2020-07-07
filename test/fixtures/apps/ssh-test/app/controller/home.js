@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'hi, ' + this.app.plugins.ssh.name;
+    const result = await this.app.ssh.autoConnectExecCommand('expr 1 + 1');
+    this.ctx.body = result.stdout;
   }
 }
 
