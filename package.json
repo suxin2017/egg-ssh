@@ -1,6 +1,6 @@
 {
   "name": "egg-ssh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "egg 插件 基于ssh2",
   "eggPlugin": {
     "name": "ssh"
@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-ssh.git"
+    "url": "git+https://github.com/AngelName/egg-ssh.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/AngelName/egg-ssh/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-ssh#readme",
+  "homepage": "https://github.com/AngelName/egg-ssh#readme",
   "author": "AngelName",
   "license": "MIT"
 }
